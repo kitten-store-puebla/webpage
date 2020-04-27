@@ -4,6 +4,7 @@ import EnhancedRoute from "./components/EnhancedRoute/EnhancedRoute";
 import ScrollToTop from "react-router-scroll-top";
 import "./App.scss";
 import Home from "./pages/Home/Home";
+import Articulo from "./pages/Articulo/Articulo";
 
 function App() {
     return (
@@ -18,6 +19,14 @@ function App() {
                             exact={true}
                         >
                             <Home />
+                        </EnhancedRoute>
+                        <EnhancedRoute
+                            path="/articulo"
+                            withNavbar={true}
+                            withFooter={true}
+                            exact={true}
+                        >
+                            <Articulo />
                         </EnhancedRoute>
                     </Switch>
                 </ScrollToTop>

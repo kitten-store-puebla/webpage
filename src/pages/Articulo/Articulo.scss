@@ -1,0 +1,16 @@
+@import "../../responsive.scss";
+@import "../../colores.scss";
+
+#articulo {
+    width: 100%;
+    display: flex;
+    .definicion-articulo,
+    .detalles-articulo {
+        width: 50%;
+    }
+    .definicion-articulo {
+        border-right: 0.5px solid $negro;
+        .item-description {
+        }
+    }
+}
