@@ -1,0 +1,188 @@
+@import "../../colores.scss";
+@import "../../responsive.scss";
+
+#home {
+    width: 100%;
+    .carousel-container {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        .carousel {
+            margin: auto;
+            height: auto;
+            display: flex;
+            width: fit-content;
+            max-width: 100%;
+            transform: translate(0, 0);
+            transition: 0.5s ease-in-out;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .arrow {
+            background: url("../../assets/ios-arrow.svg");
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 28px;
+            height: 48px;
+            left: 25px;
+            top: 50%;
+            margin-top: -48px;
+            transform: rotate(180deg);
+
+            &:last-child {
+                left: auto;
+                right: 25px;
+                transform: none;
+            }
+        }
+    }
+    .coleccion {
+        width: 100%;
+        background-color: $blanco;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 43px;
+            font-weight: 300;
+            margin: 25px auto;
+        }
+    }
+    .flex-models {
+        position: relative;
+        display: flex;
+        max-width: 100%;
+        img {
+            width: 50vw;
+        }
+        a {
+            position: absolute;
+            padding: 10px 20px;
+            background-color: $blanco;
+            text-decoration: none;
+            color: $negro;
+            border: 1px solid $negro;
+            top: 50%;
+            left: 50%;
+            margin-left: -71px;
+            margin-top: -28px;
+            bottom: auto;
+            font-size: 26px;
+        }
+    }
+    .envios {
+        display: flex;
+        align-items: center;
+        background-color: $rosa;
+        .plane {
+            background: url("../../assets/ios-airplane.svg");
+            width: 36px;
+            height: 30px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 25px;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 22px auto 25px 0;
+            color: $blanco;
+            font-weight: 300;
+        }
+    }
+    .sale-items {
+        padding: 100px 5%;
+        display: flex;
+        justify-content: space-around;
+        .item-description {
+            display: flex;
+            flex-direction: column;
+            .img {
+                width: 497px;
+                height: 552px;
+                background-size: contain !important;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: relative;
+                @media #{$desktopsmall} {
+                    width: 397px;
+                    height: 441px;
+                }
+                p {
+                    position: absolute;
+                    top: 25px;
+                    left: 25px;
+                    background-color: $oro;
+                    color: $blanco;
+                    padding: 5px 20px;
+                }
+                button {
+                    position: absolute;
+                    top: auto;
+                    left: 25px;
+                    bottom: 25px;
+                    font-size: 18px;
+                    background-color: $negro;
+                    color: $blanco;
+                    border: none;
+                    padding: 8px 20px;
+                    &:last-child {
+                        left: auto;
+                        right: 25px;
+                    }
+                }
+            }
+            .description {
+                h3 {
+                    font-weight: 400;
+                    margin: 15px auto 5px;
+                }
+                h1 {
+                    margin: 0 auto 10px;
+                }
+                .prices {
+                    display: flex;
+                    h2 {
+                        font-size: 22px;
+                        margin: 0;
+                        text-decoration: line-through;
+                        opacity: 0.35;
+                        &:last-child {
+                            text-decoration: none;
+                            opacity: 1;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .instagram-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            margin: 50px auto;
+            font-size: 30px;
+            font-weight: 300;
+        }
+        .flex-images {
+            display: flex;
+            overflow-y: scroll;
+            img {
+                margin: 0 15px;
+                border: 1px solid $oro;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

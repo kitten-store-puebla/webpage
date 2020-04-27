@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import EnhancedRoute from "./components/EnhancedRoute/EnhancedRoute";
 import ScrollToTop from "react-router-scroll-top";
 import "./App.scss";
+import Home from "./pages/Home/Home";
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                             withFooter={true}
                             exact={true}
                         >
-                            <div></div>
+                            <Home />
                         </EnhancedRoute>
                     </Switch>
                 </ScrollToTop>
