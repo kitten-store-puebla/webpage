@@ -1,0 +1,74 @@
+@import "../colores.scss";
+
+#footer {
+    background-color: $rosa;
+    width: 100%;
+    .grid {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 26.5%);
+        margin: 50px 5% 0;
+        grid-column-gap: 10%;
+        h1 {
+            color: $blanco;
+            width: fit-content;
+            font-size: 28px;
+        }
+        p,
+        a {
+            width: fit-content;
+            font-size: 22px;
+            font-weight: 400;
+            color: $font-marron;
+            text-decoration: none;
+        }
+        .contact-info,
+        .get-help,
+        .popular-categories {
+            display: flex;
+            flex-direction: column;
+            .links {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                a {
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        .contact-info {
+            .contacts {
+                margin-top: 70px;
+                p {
+                    margin: 80px 0;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .cards {
+                margin-top: 70px;
+                .flex-cards {
+                    display: flex;
+                    .card {
+                        margin: 0 10px;
+                        width: 40px;
+                        height: 25px;
+                        background-size: cover;
+                        background-position: center;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
