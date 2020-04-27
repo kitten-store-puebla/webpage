@@ -174,9 +174,11 @@
             display: flex;
             overflow-x: scroll;
             overflow-y: hidden;
+            padding-bottom: 10px;
             /* width */
             &::-webkit-scrollbar {
-                width: 100px;
+                width: 5px !important;
+                background-color: #f5f5f5;
             }
 
             /* Track */
@@ -187,8 +189,8 @@
 
             /* Handle */
             &::-webkit-scrollbar-thumb {
-                background-color: #000000;
-                border: 2px solid #555555;
+                background-color: $oro;
+                // border: 1px solid #555555;
             }
 
             img {
