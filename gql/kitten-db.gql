@@ -1,0 +1,48 @@
+type Producto @collection(name: productos) {
+    nombre: String
+    categoria: String
+    imagen: String
+    precio: Float
+    descuento: Float
+    tallas: [String]
+    clave: String
+}
+
+type Direccion @collection(name: direcciones) {
+    calle: String
+    numInterior: String
+    numExterior: String
+    colonia: String
+    ciudad: String
+    estado: String
+    codigoPostal: Int
+}
+
+type EmailList @collection(name: listaCorreos) {
+    email: String
+    novedades: Boolean
+}
+
+type OrdenProducto @collection(name: ordenesProducto) {
+    claveProducto: String
+    cantidad: Int
+    tallas: [String]
+}
+
+type Compra @collection(name: compras) {
+    carrito: [OrdenProducto]
+    subtotal: Float
+    iva: Float
+    total: Float
+    fecha: String
+    direccion: Direccion
+}
+
+type Query {
+    getProductoByCategoria(categoria: String): [Producto!]!
+    getEmailsByNovedades(novedades: Boolean): [EmailList!]!
+    allProductos: [Producto!]!
+    allCompras: [Compra!]!
+    allOrdenes: [OrdenProducto!]!
+    allEmails: [EmailList!]!
+}
